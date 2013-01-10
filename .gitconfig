@@ -1,0 +1,32 @@
+[user]
+	email = mark.dizon@makerstudios.com
+	name = Mark Dizon
+[core]
+	excludesfile = /Users/mark.dizon/.gitignore_global
+[merge]
+        keepBackup = false
+        tool = custom
+        
+[mergetool "custom"]
+        cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$LOCAL" "$PWD/$MERGED"
+        keepTemporaries = false
+        trustExitCode = false
+        keepBackup = false
+
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+[credential]
+[credential]
+[color]
+	ui = auto
+[alias]
+    s = status
+    b = branch
+    l = log
+    g = log --graph --oneline --all
+    co = commit
+    df = diff
