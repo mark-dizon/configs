@@ -46,6 +46,7 @@ alias fgrep='fgrep --color=auto'
 
 # handy short cuts #
 alias h='history'
+alias hg='history | grep'
 alias j='jobs -l'
 alias x='exit'
 alias q='exit'
@@ -53,3 +54,8 @@ alias q='exit'
 alias path='echo -e ${PATH//:/\\n}'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+#Git Bash Completion
+if [ -f `brew  --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
